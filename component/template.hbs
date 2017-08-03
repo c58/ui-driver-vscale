@@ -7,23 +7,13 @@
     </div>
     <div class="row form-group">
       <div class="col-md-2 form-label">
-        <label class="form-control-static">Organization</label>
+        <label class="form-control-static">Access Token</label>
       </div>
       <div class="col-md-4">
           {{input type="text"
             class="form-control"
-            placeholder="Scaleway Organization ID"
-            value=model.%%DRIVERNAME%%Config.organization
-          }}
-      </div>
-      <div class="col-md-2 form-label">
-        <label class="form-control-static">Token</label>
-      </div>
-      <div class="col-md-4">
-          {{input type="text"
-            class="form-control"
-            placeholder="Scaleway API Token"
-            value=model.%%DRIVERNAME%%Config.token
+            placeholder="Access Token"
+            value=model.%%DRIVERNAME%%Config.accessToken
           }}
       </div>
     </div>
@@ -33,95 +23,45 @@
     </div>
     <div class="row form-group">
       <div class="col-md-2 form-label">
-        <label class="form-control-static">Instance Name</label>
+        <label class="form-control-static">Plan</label>&nbsp;(<a href="https://developers.vscale.io/documentation/api/v1/#api-Background-GetImages">details</a>)
       </div>
       <div class="col-md-4">
         {{input type="text"
           class="form-control"
-          placeholder="Optionally specify the instance name"
+          placeholder="Specify required plan(small,medium,large,huge,monster)"
           value=model.%%DRIVERNAME%%Config.name
         }}
       </div>
       <div class="col-md-2 form-label">
-        <label class="form-control-static">Region</label>
+        <label class="form-control-static">Location</label>&nbsp;(<a href="https://developers.vscale.io/documentation/api/v1/#api-Background-GetImages">details</a>)
       </div>
       <div class="col-md-4">
         {{input type="text"
           class="form-control"
-          placeholder="Specify the location (par1,ams1)"
-          value=model.%%DRIVERNAME%%Config.region
+          placeholder="Specify the location (spb0,msk0)"
+          value=model.%%DRIVERNAME%%Config.location
         }}
       </div>
     </div>
     <div class="row form-group">
       <div class="col-md-2 form-label">
-        <label class="form-control-static">Image</label>
+        <label class="form-control-static">Image</label>&nbsp;(<a href="https://developers.vscale.io/documentation/api/v1/#api-Background-GetImages">details</a>)
       </div>
       <div class="col-md-4">
           {{input type="text"
             class="form-control"
             placeholder="Specify the image"
-            value=model.%%DRIVERNAME%%Config.image
+            value=model.%%DRIVERNAME%%Config.madeFrom
           }}
       </div>
       <div class="col-md-2 form-label">
-        <label class="form-control-static">Type</label>
+        <label class="form-control-static">Swap</label>
       </div>
       <div class="col-md-4">
           {{input type="text"
             class="form-control"
-            placeholder="Specify the commercial type"
-            value=model.%%DRIVERNAME%%Config.commercialType
-          }}
-      </div>
-    </div>
-    <div class="row form-group">
-      <div class="col-md-2 form-label">
-        <label class="form-control-static">Additional Volumes</label>
-      </div>
-      <div class="col-md-4">
-          {{input type="text"
-            class="form-control"
-            placeholder="Attach additional volume (e.g., 50G)"
-            value=model.%%DRIVERNAME%%Config.volumes
-          }}
-      </div>
-    </div>
-
-    <div class="over-hr r-mt20 r-mb20">
-      <span>Network</span>
-    </div>
-    <div class="row form-group">
-         <div class="col-md-2 form-label">
-           <label class="form-control-static">IP Address</label>
-         </div>
-         <div class="col-md-4">
-             {{input type="text"
-               class="form-control"
-               placeholder="Optionally specify the IP Address"
-               value=model.%%DRIVERNAME%%Config.ip
-             }}
-         </div>
-         <div class="col-md-2 form-label">
-           <label class="form-control-static">IPv6</label>
-         </div>
-         <div class="col-md-4">
-             {{input type="checkbox"
-               checked=model.%%DRIVERNAME%%Config.ipv6
-             }}
-         </div>
-    </div>
-
-    <div class="over-hr r-mt20 r-mb20">
-      <span>Debug</span>
-    </div>
-    <div class="row form-group">
-      <div class="col-md-2 form-label">
-        <label class="form-control-static">Enable Debugging</label>
-      </div>
-      <div class="col-md-4">
-          {{input type="checkbox"
-            checked=model.%%DRIVERNAME%%Config.debug
+            placeholder="Swap file size in MB"
+            value=model.%%DRIVERNAME%%Config.swapFile
           }}
       </div>
     </div>

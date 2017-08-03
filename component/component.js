@@ -9,17 +9,12 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
     // Write your component here, starting with setting 'model' to a machine with your config populated
     bootstrap: function() {
       let config = this.get('store').createRecord({
-        type        : '%%DRIVERNAME%%Config',
-        commercialType: 'VC1S',
-        region: '',
-        name: '',
-        debug: false,
-        image: 'ubuntu-xenial',
-        ip: '',
-        ipv6: false,
-        organization: '',
-        token: '',
-        volumes: ''
+        type: '%%DRIVERNAME%%Config',
+        accessToken: '',
+        location: 'spb0',
+        rplan: 'medium',
+        madeFrom: 'ubuntu_16.04_64_001_master',
+        swapFile: 0
       });
 
       let type = 'host';
@@ -40,19 +35,19 @@ define('ui/components/machine/driver-%%DRIVERNAME%%/component', ['exports', 'emb
       this._super();
       var errors = this.get('errors')||[];
 
-      if (!this.get('model.%%DRIVERNAME%%Config.commercialType') ) {
-        errors.push('Specifying a %%DRIVERNAME%% Instance Type is required');
+      if (!this.get('model.%%DRIVERNAME%%Config.location') ) {
+        errors.push('Specifying a %%DRIVERNAME%% Location is required');
       }
 
-      if (!this.get('model.%%DRIVERNAME%%Config.organization') ) {
-        errors.push('Specifying a %%DRIVERNAME%% Organization is required');
+      if (!this.get('model.%%DRIVERNAME%%Config.rplan') ) {
+        errors.push('Specifying a %%DRIVERNAME%% Rplan is required');
       }
 
-      if (!this.get('model.%%DRIVERNAME%%Config.token') ) {
+      if (!this.get('model.%%DRIVERNAME%%Config.accessToken') ) {
         errors.push('Specifying a %%DRIVERNAME%% Token is required');
       }
 
-      if (!this.get('model.%%DRIVERNAME%%Config.image') ) {
+      if (!this.get('model.%%DRIVERNAME%%Config.madeFrom') ) {
         errors.push('Specifying a %%DRIVERNAME%% Image is required');
       }
 
