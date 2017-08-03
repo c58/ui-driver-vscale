@@ -344,7 +344,7 @@ exports["default"] = Ember.HTMLBars.template((function() {
     statements: [
       ["inline","partial",["host/add-common"],[],["loc",[null,[3,4],[3,33]]],0,0],
       ["inline","input",[],["type","text","class","form-control","placeholder","Access Token","value",["subexpr","@mut",[["get","model.vscaleConfig.accessToken",["loc",[null,[16,18],[16,48]]],0,0,0,0]],[],[],0,0]],["loc",[null,[13,10],[17,12]]],0,0],
-      ["inline","input",[],["type","text","class","form-control","placeholder","Specify required plan(small,medium,large,huge,monster)","value",["subexpr","@mut",[["get","model.vscaleConfig.name",["loc",[null,[32,16],[32,39]]],0,0,0,0]],[],[],0,0]],["loc",[null,[29,8],[33,10]]],0,0],
+      ["inline","input",[],["type","text","class","form-control","placeholder","Specify required plan(small,medium,large,huge,monster)","value",["subexpr","@mut",[["get","model.vscaleConfig.rplan",["loc",[null,[32,16],[32,40]]],0,0,0,0]],[],[],0,0]],["loc",[null,[29,8],[33,10]]],0,0],
       ["inline","input",[],["type","text","class","form-control","placeholder","Specify the location (spb0,msk0)","value",["subexpr","@mut",[["get","model.vscaleConfig.location",["loc",[null,[42,16],[42,43]]],0,0,0,0]],[],[],0,0]],["loc",[null,[39,8],[43,10]]],0,0],
       ["inline","input",[],["type","text","class","form-control","placeholder","Specify the image","value",["subexpr","@mut",[["get","model.vscaleConfig.madeFrom",["loc",[null,[54,18],[54,45]]],0,0,0,0]],[],[],0,0]],["loc",[null,[51,10],[55,12]]],0,0],
       ["inline","input",[],["type","text","class","form-control","placeholder","Swap file size in MB","value",["subexpr","@mut",[["get","model.vscaleConfig.swapFile",["loc",[null,[64,18],[64,45]]],0,0,0,0]],[],[],0,0]],["loc",[null,[61,10],[65,12]]],0,0],
