@@ -1,0 +1,138 @@
+<section class="horizontal-form">
+  <div class="container-fluid">
+    {{partial "host/add-common"}}
+
+    <div class="over-hr r-mt20 r-mb20">
+      <span>API Access</span>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Organization</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="text"
+            class="form-control"
+            placeholder="Scaleway Organization ID"
+            value=model.%%DRIVERNAME%%Config.organization
+          }}
+      </div>
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Token</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="text"
+            class="form-control"
+            placeholder="Scaleway API Token"
+            value=model.%%DRIVERNAME%%Config.token
+          }}
+      </div>
+    </div>
+
+    <div class="over-hr r-mt20 r-mb20">
+      <span>Instance</span>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Instance Name</label>
+      </div>
+      <div class="col-md-4">
+        {{input type="text"
+          class="form-control"
+          placeholder="Optionally specify the instance name"
+          value=model.%%DRIVERNAME%%Config.name
+        }}
+      </div>
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Region</label>
+      </div>
+      <div class="col-md-4">
+        {{input type="text"
+          class="form-control"
+          placeholder="Specify the location (par1,ams1)"
+          value=model.%%DRIVERNAME%%Config.region
+        }}
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Image</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="text"
+            class="form-control"
+            placeholder="Specify the image"
+            value=model.%%DRIVERNAME%%Config.image
+          }}
+      </div>
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Type</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="text"
+            class="form-control"
+            placeholder="Specify the commercial type"
+            value=model.%%DRIVERNAME%%Config.commercialType
+          }}
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Additional Volumes</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="text"
+            class="form-control"
+            placeholder="Attach additional volume (e.g., 50G)"
+            value=model.%%DRIVERNAME%%Config.volumes
+          }}
+      </div>
+    </div>
+
+    <div class="over-hr r-mt20 r-mb20">
+      <span>Network</span>
+    </div>
+    <div class="row form-group">
+         <div class="col-md-2 form-label">
+           <label class="form-control-static">IP Address</label>
+         </div>
+         <div class="col-md-4">
+             {{input type="text"
+               class="form-control"
+               placeholder="Optionally specify the IP Address"
+               value=model.%%DRIVERNAME%%Config.ip
+             }}
+         </div>
+         <div class="col-md-2 form-label">
+           <label class="form-control-static">IPv6</label>
+         </div>
+         <div class="col-md-4">
+             {{input type="checkbox"
+               checked=model.%%DRIVERNAME%%Config.ipv6
+             }}
+         </div>
+    </div>
+
+    <div class="over-hr r-mt20 r-mb20">
+      <span>Debug</span>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2 form-label">
+        <label class="form-control-static">Enable Debugging</label>
+      </div>
+      <div class="col-md-4">
+          {{input type="checkbox"
+            checked=model.%%DRIVERNAME%%Config.debug
+          }}
+      </div>
+    </div>
+
+    {{!-- This partial contains the Labels and Advanced Options fields --}}
+    {{partial "host/add-options"}}
+  </div>
+
+  {{!-- This component shows errors produced by validate() in the component --}}
+  {{top-errors errors=errors}}
+
+  {{!-- This component shows the Create and Cancel buttons --}}
+  {{save-cancel save="save" cancel="cancel"}}
+</section>
